@@ -1,0 +1,188 @@
+<html>
+<head>
+<title>Survey home</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/custom.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+
+<!-- need to add navbar that has a logo and says powered by BHGE oil and gas or something -->
+
+<!-- Nav bar 2 -->
+<nav class="navbar navbar-inverse">
+	<div>
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">BHGE Survey portal</a>
+		</div>
+		<ul class="nav navbar-nav">
+			<li class="active"><a href="index.html">Home</a></li>
+			<li><a href="https://survey-app.run.aws-usw02-pr.ice.predix.io/searchWorkOrders">Search</a></li>
+			<li><a href="reporting.html">Download Reports</a></li>
+		</ul>
+	</div>
+</nav>
+
+
+
+<div class="container">
+	<div class="topPanel">
+
+<!-- need a scrolling gallary here -->
+		<div id="slider">
+			<div id="box">
+				<img src="images/b.jpg">
+			</div>
+
+			<!-- buttons for controls slider -->
+			<sliderButton class="prew fa fa-chevron-left" onclick="prewImage()"></sliderButton>
+			<sliderButton class="next fa fa-chevron-right" onclick="nextImage()"></sliderButton>
+		</div>
+
+
+
+	</div>
+</div>
+
+
+
+<div class="container">
+	<!-- Example row of columns -->
+	<div class="row">
+		<div class="col-md-4">
+			<!-- Table -->
+			<div class ="table1contain">
+				<table class="table table-hover">
+					<tbody>
+					<tr class="success"><td><a class="tableHeader1">Training documentation</a></td></tr>
+					<tr>
+						<td><a href="https://ge.ent.box.com/file/337824082229">Survey Training Guide</a></td>
+					</tr>
+					<tr>
+						<td><a href="https://ge.ent.box.com/file/337872679265">Oracle Basic Training</a></td>
+					</tr>
+					<tr>
+						<td><a href="https://ge.ent.box.com/file/337824085829">Subsea Service Roles & Responsibilities</a></td>
+					</tr>
+					<tr>
+						<td><a href="https://ge.ent.box.com/folder/52326609858">All CMRO Simplification training</a></td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+		<div class="col-md-4">
+		<!-- Table -->
+		<div class="table2contain">
+
+			<table class="table table-hover">
+				<tbody>
+				<tr class="info"><td><a class="tableHeader2">Statistical information</a></td></tr>
+				<tr>
+					<td>80% of drafts moved to inspection within 12hr</td>
+				</tr>
+				<tr>
+					<td>150 drafts open</td>
+				</tr>
+				<tr>
+					<td>All support queries resolved within 1 week</td>
+				</tr>
+				<tr>
+					<td>5000 WO's completed</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+		<div class="col-md-4">
+			<!-- Table -->
+			<div class="table3contain">
+
+				<table class="table table-hover">
+					<tbody>
+					<tr class="danger"><td><a class="tableHeader3">Reporting section</a></td></tr>
+					<tr>
+						<td><a href="#">Report An Issue</a></td>
+					</tr>
+					<tr>
+						<td><a href="#">Admin contact</a></td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+	</div>
+
+
+	<footer id="myFooter">
+
+		<div class="second-bar">
+			<div class="container">
+				<span class="privacyPolicies">
+				<a class="link" href="https://www.ge.com/privacy">Privacy Policy</a>
+				<a class="link" href="http://www.ge.com/terms">Terms</a>
+				<a class="link" href="#">Cookies</a>
+				</span>
+				<span class="social-icons">
+					<a href="https://twitter.com/bhgeco" class="twitter"><i class="fa fa-twitter"></i></a>
+					<a href="https://www.facebook.com/BHGEOG/" class="facebook"><i class="fa fa-facebook"></i></a>
+					<a href="https://www.linkedin.com/company/bhge/" class="LinkedIn"><i class="fa fa-linkedin"></i></a>
+				</span>
+			</div>
+		</div>
+	</footer>
+
+
+	<script type="text/javascript">
+
+  	var slider_content = document.getElementById('box');
+
+  	// contain images in an array
+    var image = ['a','b','c'];
+
+    var i = image.length;
+
+
+    // function for next slide
+
+    function nextImage(){
+    	if (i<image.length) {
+    		i= i+1;
+    	}else{
+    		i = 1;
+    	}
+    	  slider_content.innerHTML = "<img src=images/"+image[i-1]+".jpg width:100%>";
+    }
+
+
+    // function for prew slide
+
+    function prewImage(){
+
+    	if (i<image.length+1 && i>1) {
+    		i= i-1;
+    	}else{
+    		i = image.length;
+    	}
+    	  slider_content.innerHTML = "<img src=images/"+image[i-1]+".jpg width:100%>";
+
+    }
+
+
+  // script for auto image slider
+
+</script>
+
+
+</body>
+
+</html>
